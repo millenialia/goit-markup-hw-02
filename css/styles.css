@@ -14,6 +14,9 @@
 
 }
 
+
+/*general*/
+
 *,
 *::after,
 *::before {
@@ -22,16 +25,15 @@
     box-sizing: inherit;
 }
 
-html{
-    font-size: 62.5%; 
+html {
+    font-size: 62.5%;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
 }
 
-/*general*/
 
 .logo{
     text-decoration: none;
@@ -49,6 +51,15 @@ body{
 
 .logo-dark {
     color: var(--dark-color);
+}
+
+.heading-primary {
+    font-weight: 700;
+    font-size: 5.6rem;
+    color: var(--white-color);
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 4.8rem;
 }
 
 .heading-secondary{
@@ -79,6 +90,43 @@ body{
     padding-top: 12rem;
 }
 
+.btn,
+.btn::after {
+    text-decoration: none;
+    display: flex;
+    border-radius: 0.4rem;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    padding: 1.6rem 3.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    background-color: #404BBF;
+    color: var(--white-color);
+    border: none;
+}
+
+.btn-dark {
+    background-color: var(--primary-brand-color);
+    color: var(--white-color);
+}
+
+.btn-light {
+    background-color: var(--light-color);
+    color: var(--primary-brand-color);
+    border: 1px solid var(--accent-color);
+    display: inline;
+}
+
+
 /*header*/
 
 .header{
@@ -91,13 +139,13 @@ body{
 .header-box{
     display: flex;
     line-height: 24px;
-    padding: 2.4rem 15.6rem 2.4rem 15.6rem;
+    padding: 2.4rem 15.6rem;
 }
 
 .navigation-list{
     display: flex;
     list-style: none;
-    margin: 0 0 0 7.6rem;
+    margin-left: 7.6rem;
     font-weight: 500;
     font-size: 1.6rem;
 }
@@ -107,14 +155,23 @@ body{
     color: var(--dark-color);
 }
 
+.navigation-link:hover,
+.navigation-link:focus{
+    color: var(--text-color);
+}
+
+.navigation-link:active {
+    color: var(--primary-brand-color);
+}
+
 .navigation-item~.navigation-item{
-    margin: 0 0 0 4rem;
+    margin-left: 4rem;
 }
 
 .header-contact{
     display: flex;
     list-style: none;
-    margin: 0 0 0 33.2rem;
+    margin-left: 33.2rem;
     font-size: 1.6rem;
 }
 
@@ -123,8 +180,12 @@ body{
     color: var(--subtle-text-color);
 }
 
+.header-contact-link:hover{
+    color: var(--primary-brand-color);
+}
+
 .header-contact-item~.header-contact-item{
-    padding: 0 0 0 4rem;
+    padding-left: 4rem;
 }
 
 
@@ -144,36 +205,6 @@ body{
     transform: translate(-50%, -50%);
 }
 
-
-.heading-primary{
-    font-weight: 700;
-    font-size: 5.6rem;
-    color: var(--white-color);
-    line-height: 60px;
-    text-align: center;
-    margin-bottom: 4.8rem;
-}
-
-.btn{
-        text-decoration: none;
-        display: flex;
-        border-radius: 0.4rem;
-        transition: all .2s;
-        position: relative;
-        font-weight: 500;
-        font-size: 1.6rem;
-        border: none;
-        cursor: pointer;
-        padding: 1.6rem 3.2rem;
-        margin-left: auto;
-        margin-right: auto;
-        font-family: inherit;
-}
-
-.btn-dark{
-    background-color: var(--primary-brand-color);
-    color: var(--white-color);
-}
 
 
 /*features*/
@@ -214,6 +245,8 @@ body{
     margin-left: 2.4rem;
 }
 
+
+
 /*about*/
 
 .about{
@@ -242,6 +275,8 @@ body{
     margin-left: 2.4rem;
 }
 
+
+
 /*team*/
 
 .team{
@@ -265,7 +300,6 @@ body{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-
 .heading-tertiary-team{
     text-align: center;
     padding-top: 3.2rem;
@@ -275,6 +309,8 @@ body{
     text-align: center;
     padding-top: .8rem;
 }
+
+
 
 /*footer*/
 
@@ -303,10 +339,10 @@ body{
 /*portfolio*/
 
 .portfolio{
-width: 144rem;
-height: 169.2rem;
-background-color: var(--background-light-color);
-position: relative;
+    width: 144rem;
+    height: 169.2rem;
+    background-color: var(--background-light-color);
+    position: relative;
 }
 
 .portfolio-item{
@@ -315,9 +351,7 @@ position: relative;
     background-color: white;
     box-sizing: border-box;
     border: 1px solid var(--accent-color);
-    }
-
-
+}
 
 .portfolio-list{
     display: flex;
@@ -340,15 +374,6 @@ position: relative;
     padding-top: 9.6rem;
     padding-left: 42.7rem;
     padding-bottom: 2.4rem;
-}
-
-.btn-light{
-    background-color: var(--light-color);
-    color: var(--primary-brand-color);
-    font-family: inherit;
-    border: 1px solid var(--accent-color);
-    display: inline;
-    
 }
 
 .portfolio-btn{
